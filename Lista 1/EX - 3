@@ -1,0 +1,34 @@
+class Main {
+
+  public static void main(String[] args) {
+    Carro carro0 = new Carro("Volkswage","Gol-GTI",2012,2);
+    Carro carro1 = new Carro("Fiat","Stilo(c/teto solar)",2015,4);
+    Carro carro2 = new Carro("Lamborghini","Huracan c/ar-condicionado",2022,2);
+
+     System.out.println("\n\n\n Dados dos carros na garagem: \n");
+
+        System.out.println(carro0.dados());
+        System.out.println(carro1.dados());
+        System.out.println(carro2.dados());
+  }
+  
+  static class Carro{
+    String marca;
+    String modelo;
+    int ano;
+    int portas;
+
+    Carro(String marca, String modelo, int ano, int portas){
+      this.marca = marca;
+      this.modelo = modelo;
+      this.ano = ano;
+      this.portas = portas;
+    }
+
+    String dados(){
+      return("Marca:"+" "+marca+"\n"+"Modelo:"+" "+modelo+"\n"+"Ano:"+" "+ano+"\n"+"Portas:"+" "+portas);
+    }
+    
+  }
+  
+}
