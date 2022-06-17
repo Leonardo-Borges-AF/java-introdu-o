@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+class Main {
+  
+  public static void main(String[] args) {
+    
+    Scanner ler = new Scanner(System.in);
+    int m[][] = new int[5][5];
+    int soma = 0;
+    
+    for(int linha=0;linha!=5;linha++){
+      for(int coluna=0;coluna!=5;coluna++){
+        System.out.println("digite o valor no local ["+linha+"]"+"["+coluna+"]");
+        m[linha][coluna] = ler.nextInt();
+      }
+    }
+
+    for(int i=0;i!=5;i++){
+      soma = soma + m[4][i];
+    }
+    System.out.println("soma linha 4 :" + soma);
+    soma = 0;
+    for(int i=0;i!=5;i++){
+      soma = soma + m[i][2];
+    }
+    System.out.println("soma coluna 2 :" + soma);
+    soma = 0;
+    for(int i=0;i!=5;i++){
+      soma = soma + m[i][i];
+    }
+    System.out.println("soma diaoganla principal :" + soma);
+    soma = 0;
+    for(int i=0;i!=5;i++){
+      int j = 5;
+      soma = soma + m[i][j];
+      j--;
+    }
+    System.out.println("soma diaoganla principal :" + soma);
+    soma = 0;
+    for(int i=0;i!=5;i++){
+      for(int j=0;j!=5;j++){
+        soma = soma + m[i][j];
+      }
+    }
+    System.out.println("soma diaoganla principal :" + soma);
+    soma = 0;
+    for(int i=0;i!=5;i++){
+      for(int j=0;j!=5;j++){
+        System.out.println(m[i][j]);
+      }
+    }
+    
+  }
+  
+}
